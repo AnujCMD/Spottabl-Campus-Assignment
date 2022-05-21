@@ -26,7 +26,7 @@ public class Service {
 		String str1 = "";
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count(email) as FlexMoney From registrations Where email LIKE '%Spottabl.com' AND email LIKE 'user%'";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -41,7 +41,7 @@ public class Service {
 	public String userInvitedFromSpottabl() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as 'Number of users invited from spottabl' From clientuserinvites WHERE inviter LIKE '%spottabl.com' AND email Like '%Spottabl.com' AND email Like 'user%'";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -55,7 +55,7 @@ public class Service {
 	public String userAcceptedInvite() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as 'Number of users accepted Invited' From clientuserinvites WHERE accepted= 'TRUE' AND email Like '%Spottabl.com' AND email Like 'user%'";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -69,7 +69,7 @@ public class Service {
 	public String userInvitedFromSpottablUser() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as 'Number of users inviter from spottabl user' From clientuserinvites WHERE inviter LIKE 'user%' AND (inviter Like '%Spottabl.com') AND (email Like '%Spottabl.com') AND (email Like 'user%')";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -85,7 +85,7 @@ public class Service {
 		String str1 = "";
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as FlexMoney From registrations Where email LIKE '%flexmoney.in' AND email LIKE 'user%'";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -100,7 +100,7 @@ public class Service {
 	public String flexUserInvitedFromSpottabl() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as 'Number of users invited from spottabl' From clientuserinvites WHERE inviter LIKE '%spottabl.com' AND email Like '%flexmoney.in' AND email Like 'user%'";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -114,7 +114,7 @@ public class Service {
 	public String flexUserAcceptedInvite() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as 'Number of users accepted Invited' From clientuserinvites WHERE accepted= 'TRUE' AND email Like '%flexmoney.in' AND email Like 'user%'";
 	        ResultSet rs = stmt.executeQuery(sql);
@@ -128,7 +128,7 @@ public class Service {
 	public String flexUserInvitedFromSpottablUser() {
 	    try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","anujqwerty32");
+	        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Spottabl","root","root");
 	        Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	        String sql = "Select Count( DISTINCT email) as 'Number of users inviter from spottabl user' From clientuserinvites WHERE inviter LIKE 'user%' AND (inviter Like '%Spottabl.com') AND (email Like '%flexmoney') AND (email Like 'user%')";
 	        ResultSet rs = stmt.executeQuery(sql);
